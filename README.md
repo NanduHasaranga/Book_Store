@@ -1,6 +1,6 @@
 # 📚 MERN Stack Online Book Store with Inventory Management
 
-Welcome to the **Online Book Store** project! This is a full-fledged web application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It features an inventory management system, user authentication, and a user-friendly interface for browsing and managing books.
+Welcome to the **Online Book Store** project! This is a full-fledged web application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It features an inventory management system, user authentication, and a user-friendly interface for browsing and managing books..
 
 ## 🚀 Project Features
 
