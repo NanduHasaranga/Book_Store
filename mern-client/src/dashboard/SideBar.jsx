@@ -1,29 +1,37 @@
 import { Sidebar } from "flowbite-react";
 import { BiBuoy } from "react-icons/bi";
-import { HiArrowSmRight, HiChartPie, HiInbox, HiOutlineCloudUpload, HiShoppingBag, HiTable, HiUser, HiViewBoards } from "react-icons/hi";
+import {
+  HiArrowSmRight,
+  HiChartPie,
+  HiInbox,
+  HiOutlineCloudUpload,
+  HiShoppingBag,
+  HiTable,
+  HiUser,
+  HiViewBoards,
+} from "react-icons/hi";
 
-import userImg from"../assets/ProfilePic.jpg"
+import userImg from "../assets/ProfilePic.jpg";
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthProvider";
 
 const SideBar = () => {
-  const {user} = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   console.log(user);
   return (
     <Sidebar aria-label="Sidebar with content separator example">
       <Sidebar.Logo href="/" img={userImg} imgAlt="image" className="w-16 h-16">
-        <p>
-          {
-              user?.displayName || "Demo User"
-          }
-        </p>
+        <p>{user?.displayName || "Demo User"}</p>
       </Sidebar.Logo>
       <Sidebar.Items>
         <Sidebar.ItemGroup>
           <Sidebar.Item href="/admin/dashboard" icon={HiChartPie}>
             Dashboard
           </Sidebar.Item>
-          <Sidebar.Item href="/admin/dashboard/upload" icon={HiOutlineCloudUpload}>
+          <Sidebar.Item
+            href="/admin/dashboard/upload"
+            icon={HiOutlineCloudUpload}
+          >
             Upload Book
           </Sidebar.Item>
           <Sidebar.Item href="/admin/dashboard/manage" icon={HiInbox}>
@@ -55,7 +63,7 @@ const SideBar = () => {
         </Sidebar.ItemGroup>
       </Sidebar.Items>
     </Sidebar>
-  )
-}
+  );
+};
 
-export default SideBar
+export default SideBar;

@@ -1,20 +1,18 @@
-
-import './App.css'
-import { Outlet } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import MyFooter from './components/MyFooter'
+import "./App.css";
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import MyFooter from "./components/MyFooter";
 
 function App() {
-
   return (
     <>
-      <Navbar/>
-      <div className='min-h-screen'>
-        <Outlet/>
+      <Navbar />
+      <div className="min-h-screen">
+        <Outlet />
       </div>
-      <MyFooter/>
+      <MyFooter />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
