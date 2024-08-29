@@ -1,7 +1,4 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Home from "../home/Home";
 import Shop from "../shop/Shop";
@@ -21,66 +18,72 @@ import Logout from "../components/Logout";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     children: [
-        {
-            path: '/',
-            element: <Home/>
-        },
-        {
-            path: '/shop',
-            element: <Shop/>
-        },
-        {
-            path: '/about',
-            element: <About/>
-        },
-        {
-            path: '/blog',
-            element: <Blog/>
-        },
-        {
-          path: '/book/:id',
-          element: <SingleBook/>,
-          loader: ({params}) => fetch(`http://localhost:5000/book/${params.id}`)
-        }
-    ]
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/shop",
+        element: <Shop />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
+      {
+        path: "/book/:id",
+        element: <SingleBook />,
+        loader: ({ params }) =>
+          fetch(`https://book-store-server-rosy.vercel.app/book/${params.id}`),
+      },
+    ],
   },
   {
     path: "/admin/dashboard",
-    element: <DashboardLayout/>,
+    element: <DashboardLayout />,
     children: [
       {
         path: "/admin/dashboard",
-        element: <PrivateRoute><Dashboard/></PrivateRoute>
+        element: (
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/admin/dashboard/upload",
-        element: <UploadBook/>
+        element: <UploadBook />,
       },
       {
         path: "/admin/dashboard/manage",
-        element: <ManageBooks/>
+        element: <ManageBooks />,
       },
       {
         path: "/admin/dashboard/edit-books/:id",
-        element: <EditBooks/>,
-        loader: ({params}) => fetch(`http://localhost:5000/book/${params.id}`)
-      }
-    ]
+        element: <EditBooks />,
+        loader: ({ params }) =>
+          fetch(`https://book-store-server-rosy.vercel.app/book/${params.id}`),
+      },
+    ],
   },
   {
     path: "sign-up",
-    element: <SignUp/>
+    element: <SignUp />,
   },
   {
     path: "login",
-    element: <Login/>
+    element: <Login />,
   },
   {
-        path: "logout",
-        element: <Logout/>
-  }
+    path: "logout",
+    element: <Logout />,
+  },
 ]);
 
 export default router;
