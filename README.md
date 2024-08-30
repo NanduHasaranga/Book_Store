@@ -35,4 +35,3 @@ Welcome to the **Online Book Store** project! This is a full-fledged web applica
       ├── pages/
       ├── redux/
       └── App.js
- 
