@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Grid, Paper, Typography, Box } from "@mui/material";
 import {
   BarChart,
