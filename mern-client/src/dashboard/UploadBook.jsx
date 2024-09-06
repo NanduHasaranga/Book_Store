@@ -6,7 +6,8 @@ const UploadBook = () => {
   const bookCategories = [
     "Fiction",
     "Non-Fiction",
-    "Mistery",
+    "Mystery",
+    "Adult",
     "Programming",
     "Science Fiction",
     "Fantasy",

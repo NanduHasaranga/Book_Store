@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import { Button, Checkbox, Label, Textarea, TextInput } from "flowbite-react";
+import { Button, Label, Textarea, TextInput } from "flowbite-react";
 
 const EditBooks = () => {
   const { id } = useParams();
@@ -16,7 +16,8 @@ const EditBooks = () => {
   const bookCategories = [
     "Fiction",
     "Non-Fiction",
-    "Mistery",
+    "Mystery",
+    "Adult",
     "Programming",
     "Science Fiction",
     "Fantasy",
