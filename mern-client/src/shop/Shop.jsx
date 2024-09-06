@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { Card } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
   const [books, setBooks] = useState([]);
@@ -25,14 +26,15 @@ const Shop = () => {
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
                 <p>
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
+                  {book.bookDescription.slice(0, 150)}
+                  <Link to="" style={{ color: "navy" }}>
+                    ...See More
+                  </Link>
                 </p>
               </p>
-
-              <button className="bg-blue-700 font-semibold text-white py-2 rounded">
+              <Link to={book.bookPDFURL} target="_blank" rel="noopener noreferrer"className="bg-blue-700 font-semibold text-white py-2 px-4 rounded inline-block text-center no-underline">
                 Buy Now
-              </button>
+              </Link>
             </Card>
           ))
         }
