@@ -7,7 +7,7 @@ const OtherBooks = () => {
   useEffect(() => {
     fetch("https://book-store-server-rosy.vercel.app/all-books")
       .then((res) => res.json())
-      .then((data) => setBooks(data.slice(4, 8)));
+      .then((data) => setBooks(data.slice(6, 20)));
   });
   return (
     <div>
