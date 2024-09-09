@@ -12,7 +12,7 @@ Welcome to the **Online Book Store** project! This is a full-fledged web applica
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React.js, Redux (for state management), CSS/Bootstrap for styling
+- **Frontend**: React.js, CSS/Bootstrap for styling
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB with Mongoose ODM
 - **Authentication**: Google Firebase Authentication for managing user login and registration
