@@ -66,7 +66,7 @@ const Login = () => {
                                 {error ? <p className='text-red-600 text-base'>Email or Password is not correct</p> : ""}
                                 <p>If you haven't an account. Please <Link to="/sign-up" className='text-blue-700 underline'>Sign up</Link> Here</p>
                                 <div className="relative">
-                                    <button className="bg-blue-500 text-white rounded-md px-6 py-2">Sign up</button>
+                                    <button className="bg-blue-500 text-white rounded-md px-6 py-2">Login</button>
                                 </div>
                             </form>
                         </div>
