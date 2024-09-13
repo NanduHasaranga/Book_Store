@@ -58,15 +58,27 @@ const router = createBrowserRouter([
       },
       {
         path: "/admin/dashboard/upload",
-        element: <UploadBook />,
+        element: (
+          <PrivateRoute>
+            <UploadBook />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/admin/dashboard/manage",
-        element: <ManageBooks />,
+        element: (
+          <PrivateRoute>
+            <ManageBooks />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/admin/dashboard/edit-books/:id",
-        element: <EditBooks />,
+        element: (
+          <PrivateRoute>
+            <EditBooks />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`https://book-store-server-rosy.vercel.app/book/${params.id}`),
       },
